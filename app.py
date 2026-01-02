@@ -173,7 +173,7 @@ def update_price(P_id):
         add_if_not_found()
 
 #to display menu and take user input
-def menu():
+def main():
     print("Welcome to the Warehouse Inventory Management.")
     while True:
         ch=int(input("1. Add Products\n2. Remove Product\n3. View Inventory\n4. Update Inventory Stock\n5. Search Product\n6. Update Product Price\n7. Exit\nSelect any operation to perform (write any number between 1 and 7):\n"))
@@ -199,6 +199,6 @@ def menu():
             break  #to exit the while loop and end program
         else:
             print("Invalid choice. Please select a number between 1 and 7.\n")
-            menu() #Restarting the menu function for valid input
+            
 #Running the menu function to start the program
-menu()
+main()
