@@ -1,0 +1,1402 @@
+[
+    {
+        "date": "19-11-2025",
+        "product": "Sweater53",
+        "quantity": 5,
+        "revenue": 741.4,
+        "bill_id": "BILL-7906"
+    },
+    {
+        "date": "21-11-2025",
+        "product": "Sweater26",
+        "quantity": 9,
+        "revenue": 1298.34,
+        "bill_id": "BILL-4765"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Soda93",
+        "quantity": 6,
+        "revenue": 2144.4,
+        "bill_id": "BILL-4932"
+    },
+    {
+        "date": "05-11-2025",
+        "product": "Lighter25",
+        "quantity": 6,
+        "revenue": 301.62,
+        "bill_id": "BILL-2063"
+    },
+    {
+        "date": "09-12-2025",
+        "product": "Vodka99",
+        "quantity": 6,
+        "revenue": 1998.72,
+        "bill_id": "BILL-8308"
+    },
+    {
+        "date": "21-12-2025",
+        "product": "Sweater26",
+        "quantity": 7,
+        "revenue": 1009.82,
+        "bill_id": "BILL-1054"
+    },
+    {
+        "date": "24-11-2025",
+        "product": "Oil91",
+        "quantity": 6,
+        "revenue": 1815.48,
+        "bill_id": "BILL-7841"
+    },
+    {
+        "date": "07-11-2025",
+        "product": "Oil91",
+        "quantity": 5,
+        "revenue": 1512.9,
+        "bill_id": "BILL-7826"
+    },
+    {
+        "date": "26-12-2025",
+        "product": "Shirt8",
+        "quantity": 1,
+        "revenue": 297.51,
+        "bill_id": "BILL-5316"
+    },
+    {
+        "date": "10-11-2025",
+        "product": "Towel56",
+        "quantity": 3,
+        "revenue": 741.57,
+        "bill_id": "BILL-1174"
+    },
+    {
+        "date": "23-12-2025",
+        "product": "Cheese39",
+        "quantity": 10,
+        "revenue": 1161.2,
+        "bill_id": "BILL-6578"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Tea13",
+        "quantity": 8,
+        "revenue": 2088.48,
+        "bill_id": "BILL-3854"
+    },
+    {
+        "date": "23-12-2025",
+        "product": "Whiskey88",
+        "quantity": 3,
+        "revenue": 17.52,
+        "bill_id": "BILL-2029"
+    },
+    {
+        "date": "26-12-2025",
+        "product": "Gloves35",
+        "quantity": 10,
+        "revenue": 4256.6,
+        "bill_id": "BILL-6884"
+    },
+    {
+        "date": "04-01-2026",
+        "product": "Fries97",
+        "quantity": 10,
+        "revenue": 917.7,
+        "bill_id": "BILL-4068"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Bleach65",
+        "quantity": 2,
+        "revenue": 893.42,
+        "bill_id": "BILL-9599"
+    },
+    {
+        "date": "21-12-2025",
+        "product": "Bracelet100",
+        "quantity": 3,
+        "revenue": 973.5,
+        "bill_id": "BILL-8175"
+    },
+    {
+        "date": "17-12-2025",
+        "product": "Soap52",
+        "quantity": 9,
+        "revenue": 2617.2,
+        "bill_id": "BILL-3628"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Brush84",
+        "quantity": 3,
+        "revenue": 520.29,
+        "bill_id": "BILL-5697"
+    },
+    {
+        "date": "04-12-2025",
+        "product": "Cleaner70",
+        "quantity": 3,
+        "revenue": 89.73,
+        "bill_id": "BILL-3643"
+    },
+    {
+        "date": "18-12-2025",
+        "product": "Towel56",
+        "quantity": 5,
+        "revenue": 1235.95,
+        "bill_id": "BILL-5780"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Pants44",
+        "quantity": 8,
+        "revenue": 571.12,
+        "bill_id": "BILL-7730"
+    },
+    {
+        "date": "29-12-2025",
+        "product": "Phone14",
+        "quantity": 10,
+        "revenue": 3605.8,
+        "bill_id": "BILL-8777"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Oil21",
+        "quantity": 7,
+        "revenue": 3472.63,
+        "bill_id": "BILL-5107"
+    },
+    {
+        "date": "06-12-2025",
+        "product": "Cake69",
+        "quantity": 1,
+        "revenue": 239.19,
+        "bill_id": "BILL-2816"
+    },
+    {
+        "date": "01-12-2025",
+        "product": "Brush84",
+        "quantity": 4,
+        "revenue": 693.72,
+        "bill_id": "BILL-2710"
+    },
+    {
+        "date": "21-12-2025",
+        "product": "Tea96",
+        "quantity": 5,
+        "revenue": 315.8,
+        "bill_id": "BILL-1607"
+    },
+    {
+        "date": "19-12-2025",
+        "product": "Beer86",
+        "quantity": 9,
+        "revenue": 3358.98,
+        "bill_id": "BILL-2978"
+    },
+    {
+        "date": "02-01-2026",
+        "product": "Shorts82",
+        "quantity": 9,
+        "revenue": 661.05,
+        "bill_id": "BILL-4017"
+    },
+    {
+        "date": "08-12-2025",
+        "product": "Pants92",
+        "quantity": 8,
+        "revenue": 91.44,
+        "bill_id": "BILL-9154"
+    },
+    {
+        "date": "27-11-2025",
+        "product": "Whiskey48",
+        "quantity": 9,
+        "revenue": 1128.15,
+        "bill_id": "BILL-7491"
+    },
+    {
+        "date": "06-11-2025",
+        "product": "Pizza57",
+        "quantity": 1,
+        "revenue": 230.09,
+        "bill_id": "BILL-9509"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Apple17",
+        "quantity": 9,
+        "revenue": 774.36,
+        "bill_id": "BILL-1867"
+    },
+    {
+        "date": "20-12-2025",
+        "product": "Lens66",
+        "quantity": 6,
+        "revenue": 2039.28,
+        "bill_id": "BILL-9437"
+    },
+    {
+        "date": "27-12-2025",
+        "product": "Whiskey48",
+        "quantity": 6,
+        "revenue": 752.1,
+        "bill_id": "BILL-3507"
+    },
+    {
+        "date": "18-12-2025",
+        "product": "Hat87",
+        "quantity": 3,
+        "revenue": 801.09,
+        "bill_id": "BILL-4890"
+    },
+    {
+        "date": "24-12-2025",
+        "product": "Fries7",
+        "quantity": 7,
+        "revenue": 1978.41,
+        "bill_id": "BILL-1689"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Fries83",
+        "quantity": 2,
+        "revenue": 949.52,
+        "bill_id": "BILL-9246"
+    },
+    {
+        "date": "10-12-2025",
+        "product": "Coat42",
+        "quantity": 10,
+        "revenue": 2004.7,
+        "bill_id": "BILL-6239"
+    },
+    {
+        "date": "07-11-2025",
+        "product": "Tea96",
+        "quantity": 4,
+        "revenue": 252.64,
+        "bill_id": "BILL-3766"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Fries74",
+        "quantity": 4,
+        "revenue": 1269.36,
+        "bill_id": "BILL-8735"
+    },
+    {
+        "date": "19-12-2025",
+        "product": "Fries97",
+        "quantity": 9,
+        "revenue": 825.93,
+        "bill_id": "BILL-5903"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Fries97",
+        "quantity": 6,
+        "revenue": 550.62,
+        "bill_id": "BILL-1550"
+    },
+    {
+        "date": "04-01-2026",
+        "product": "Whiskey63",
+        "quantity": 6,
+        "revenue": 1903.98,
+        "bill_id": "BILL-6015"
+    },
+    {
+        "date": "12-11-2025",
+        "product": "Butter61",
+        "quantity": 2,
+        "revenue": 278.84,
+        "bill_id": "BILL-1661"
+    },
+    {
+        "date": "18-11-2025",
+        "product": "Chocolate23",
+        "quantity": 7,
+        "revenue": 2720.34,
+        "bill_id": "BILL-8495"
+    },
+    {
+        "date": "12-12-2025",
+        "product": "Tripod76",
+        "quantity": 3,
+        "revenue": 1376.25,
+        "bill_id": "BILL-3715"
+    },
+    {
+        "date": "03-01-2026",
+        "product": "Towel56",
+        "quantity": 8,
+        "revenue": 1977.52,
+        "bill_id": "BILL-5104"
+    },
+    {
+        "date": "08-12-2025",
+        "product": "Book95",
+        "quantity": 6,
+        "revenue": 2009.22,
+        "bill_id": "BILL-9734"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Thermometer16",
+        "quantity": 5,
+        "revenue": 561.75,
+        "bill_id": "BILL-3659"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Chocolate23",
+        "quantity": 5,
+        "revenue": 1943.1,
+        "bill_id": "BILL-8532"
+    },
+    {
+        "date": "12-11-2025",
+        "product": "Tripod76",
+        "quantity": 7,
+        "revenue": 3211.25,
+        "bill_id": "BILL-9790"
+    },
+    {
+        "date": "29-12-2025",
+        "product": "Belt28",
+        "quantity": 10,
+        "revenue": 2346.7,
+        "bill_id": "BILL-9060"
+    },
+    {
+        "date": "04-12-2025",
+        "product": "Lighter27",
+        "quantity": 4,
+        "revenue": 504.12,
+        "bill_id": "BILL-4598"
+    },
+    {
+        "date": "16-11-2025",
+        "product": "Blouse41",
+        "quantity": 8,
+        "revenue": 3727.52,
+        "bill_id": "BILL-4295"
+    },
+    {
+        "date": "13-12-2025",
+        "product": "Cheese39",
+        "quantity": 9,
+        "revenue": 1045.08,
+        "bill_id": "BILL-3601"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Towel45",
+        "quantity": 1,
+        "revenue": 93.54,
+        "bill_id": "BILL-4198"
+    },
+    {
+        "date": "05-11-2025",
+        "product": "Pants92",
+        "quantity": 9,
+        "revenue": 102.87,
+        "bill_id": "BILL-3555"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Phone22",
+        "quantity": 6,
+        "revenue": 135.0,
+        "bill_id": "BILL-2611"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Cleaner70",
+        "quantity": 2,
+        "revenue": 59.82,
+        "bill_id": "BILL-9265"
+    },
+    {
+        "date": "16-11-2025",
+        "product": "Detergent72",
+        "quantity": 2,
+        "revenue": 227.8,
+        "bill_id": "BILL-4279"
+    },
+    {
+        "date": "26-11-2025",
+        "product": "Sweater26",
+        "quantity": 9,
+        "revenue": 1298.34,
+        "bill_id": "BILL-4084"
+    },
+    {
+        "date": "10-11-2025",
+        "product": "Hat87",
+        "quantity": 2,
+        "revenue": 534.06,
+        "bill_id": "BILL-3490"
+    },
+    {
+        "date": "25-11-2025",
+        "product": "Thermometer16",
+        "quantity": 3,
+        "revenue": 337.05,
+        "bill_id": "BILL-1239"
+    },
+    {
+        "date": "25-11-2025",
+        "product": "Whiskey48",
+        "quantity": 5,
+        "revenue": 626.75,
+        "bill_id": "BILL-5588"
+    },
+    {
+        "date": "04-12-2025",
+        "product": "Banana68",
+        "quantity": 3,
+        "revenue": 1301.76,
+        "bill_id": "BILL-1223"
+    },
+    {
+        "date": "21-11-2025",
+        "product": "Tie37",
+        "quantity": 6,
+        "revenue": 1020.84,
+        "bill_id": "BILL-9027"
+    },
+    {
+        "date": "07-11-2025",
+        "product": "Jacket31",
+        "quantity": 6,
+        "revenue": 812.04,
+        "bill_id": "BILL-4383"
+    },
+    {
+        "date": "08-11-2025",
+        "product": "Fries7",
+        "quantity": 6,
+        "revenue": 1695.78,
+        "bill_id": "BILL-8066"
+    },
+    {
+        "date": "14-12-2025",
+        "product": "Cleaner70",
+        "quantity": 1,
+        "revenue": 29.91,
+        "bill_id": "BILL-2073"
+    },
+    {
+        "date": "29-12-2025",
+        "product": "Apple17",
+        "quantity": 5,
+        "revenue": 430.2,
+        "bill_id": "BILL-7838"
+    },
+    {
+        "date": "25-11-2025",
+        "product": "Lighter27",
+        "quantity": 9,
+        "revenue": 1134.27,
+        "bill_id": "BILL-5861"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Cream81",
+        "quantity": 8,
+        "revenue": 717.36,
+        "bill_id": "BILL-8109"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Pizza57",
+        "quantity": 9,
+        "revenue": 2070.81,
+        "bill_id": "BILL-1761"
+    },
+    {
+        "date": "24-11-2025",
+        "product": "Soda46",
+        "quantity": 9,
+        "revenue": 1243.71,
+        "bill_id": "BILL-4169"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Chocolate64",
+        "quantity": 3,
+        "revenue": 1442.22,
+        "bill_id": "BILL-6137"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Coat42",
+        "quantity": 3,
+        "revenue": 601.41,
+        "bill_id": "BILL-5511"
+    },
+    {
+        "date": "21-12-2025",
+        "product": "Socks55",
+        "quantity": 9,
+        "revenue": 107.1,
+        "bill_id": "BILL-2614"
+    },
+    {
+        "date": "02-12-2025",
+        "product": "Phone14",
+        "quantity": 4,
+        "revenue": 1442.32,
+        "bill_id": "BILL-6534"
+    },
+    {
+        "date": "08-11-2025",
+        "product": "Bread47",
+        "quantity": 5,
+        "revenue": 1946.65,
+        "bill_id": "BILL-2605"
+    },
+    {
+        "date": "15-12-2025",
+        "product": "Wheat43",
+        "quantity": 10,
+        "revenue": 3406.3,
+        "bill_id": "BILL-2392"
+    },
+    {
+        "date": "10-12-2025",
+        "product": "Soap12",
+        "quantity": 5,
+        "revenue": 438.9,
+        "bill_id": "BILL-1602"
+    },
+    {
+        "date": "25-11-2025",
+        "product": "Speaker15",
+        "quantity": 7,
+        "revenue": 2977.59,
+        "bill_id": "BILL-6782"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Bracelet100",
+        "quantity": 10,
+        "revenue": 3245.0,
+        "bill_id": "BILL-5925"
+    },
+    {
+        "date": "12-12-2025",
+        "product": "Phone79",
+        "quantity": 8,
+        "revenue": 3513.92,
+        "bill_id": "BILL-5458"
+    },
+    {
+        "date": "21-12-2025",
+        "product": "Cleaner70",
+        "quantity": 6,
+        "revenue": 179.46,
+        "bill_id": "BILL-1532"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Fries83",
+        "quantity": 7,
+        "revenue": 3323.32,
+        "bill_id": "BILL-9098"
+    },
+    {
+        "date": "21-11-2025",
+        "product": "Butter61",
+        "quantity": 6,
+        "revenue": 836.52,
+        "bill_id": "BILL-8754"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Deodorant54",
+        "quantity": 8,
+        "revenue": 602.48,
+        "bill_id": "BILL-8103"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Beer86",
+        "quantity": 3,
+        "revenue": 1119.66,
+        "bill_id": "BILL-2111"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Soap12",
+        "quantity": 5,
+        "revenue": 438.9,
+        "bill_id": "BILL-2687"
+    },
+    {
+        "date": "03-01-2026",
+        "product": "Candy60",
+        "quantity": 9,
+        "revenue": 3405.51,
+        "bill_id": "BILL-1066"
+    },
+    {
+        "date": "14-11-2025",
+        "product": "Thermometer16",
+        "quantity": 7,
+        "revenue": 786.45,
+        "bill_id": "BILL-2108"
+    },
+    {
+        "date": "06-12-2025",
+        "product": "Towel45",
+        "quantity": 2,
+        "revenue": 187.08,
+        "bill_id": "BILL-1848"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Bread47",
+        "quantity": 8,
+        "revenue": 3114.64,
+        "bill_id": "BILL-8297"
+    },
+    {
+        "date": "02-01-2026",
+        "product": "Butter61",
+        "quantity": 5,
+        "revenue": 697.1,
+        "bill_id": "BILL-6501"
+    },
+    {
+        "date": "06-12-2025",
+        "product": "Vodka36",
+        "quantity": 3,
+        "revenue": 1031.91,
+        "bill_id": "BILL-8317"
+    },
+    {
+        "date": "05-11-2025",
+        "product": "Wheat43",
+        "quantity": 8,
+        "revenue": 2725.04,
+        "bill_id": "BILL-8985"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Biscuit9",
+        "quantity": 6,
+        "revenue": 1965.18,
+        "bill_id": "BILL-8087"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Vodka99",
+        "quantity": 8,
+        "revenue": 2664.96,
+        "bill_id": "BILL-9185"
+    },
+    {
+        "date": "15-12-2025",
+        "product": "Pen94",
+        "quantity": 8,
+        "revenue": 966.96,
+        "bill_id": "BILL-6736"
+    },
+    {
+        "date": "07-11-2025",
+        "product": "Towel85",
+        "quantity": 8,
+        "revenue": 1263.92,
+        "bill_id": "BILL-7388"
+    },
+    {
+        "date": "20-11-2025",
+        "product": "Lens66",
+        "quantity": 1,
+        "revenue": 339.88,
+        "bill_id": "BILL-1072"
+    },
+    {
+        "date": "29-12-2025",
+        "product": "Cleaner77",
+        "quantity": 8,
+        "revenue": 3332.16,
+        "bill_id": "BILL-2900"
+    },
+    {
+        "date": "10-12-2025",
+        "product": "Tripod76",
+        "quantity": 4,
+        "revenue": 1835.0,
+        "bill_id": "BILL-6271"
+    },
+    {
+        "date": "16-11-2025",
+        "product": "Dress3",
+        "quantity": 10,
+        "revenue": 4256.9,
+        "bill_id": "BILL-8369"
+    },
+    {
+        "date": "11-12-2025",
+        "product": "Whiskey63",
+        "quantity": 7,
+        "revenue": 2221.31,
+        "bill_id": "BILL-3686"
+    },
+    {
+        "date": "12-11-2025",
+        "product": "Mask67",
+        "quantity": 7,
+        "revenue": 393.75,
+        "bill_id": "BILL-4005"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Pen94",
+        "quantity": 7,
+        "revenue": 846.09,
+        "bill_id": "BILL-4213"
+    },
+    {
+        "date": "18-11-2025",
+        "product": "Mouse29",
+        "quantity": 2,
+        "revenue": 71.0,
+        "bill_id": "BILL-5233"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Pants44",
+        "quantity": 10,
+        "revenue": 713.9,
+        "bill_id": "BILL-3277"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Tripod76",
+        "quantity": 2,
+        "revenue": 917.5,
+        "bill_id": "BILL-9720"
+    },
+    {
+        "date": "09-12-2025",
+        "product": "Bracelet100",
+        "quantity": 1,
+        "revenue": 324.5,
+        "bill_id": "BILL-8338"
+    },
+    {
+        "date": "08-12-2025",
+        "product": "Tripod5",
+        "quantity": 7,
+        "revenue": 1459.57,
+        "bill_id": "BILL-7754"
+    },
+    {
+        "date": "17-12-2025",
+        "product": "Matchbox40",
+        "quantity": 6,
+        "revenue": 1582.62,
+        "bill_id": "BILL-9048"
+    },
+    {
+        "date": "27-11-2025",
+        "product": "Jacket31",
+        "quantity": 7,
+        "revenue": 947.38,
+        "bill_id": "BILL-2707"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Bulb33",
+        "quantity": 8,
+        "revenue": 3612.8,
+        "bill_id": "BILL-6709"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Pants44",
+        "quantity": 9,
+        "revenue": 642.51,
+        "bill_id": "BILL-9553"
+    },
+    {
+        "date": "01-01-2026",
+        "product": "Lighter25",
+        "quantity": 10,
+        "revenue": 502.7,
+        "bill_id": "BILL-2629"
+    },
+    {
+        "date": "13-12-2025",
+        "product": "Chocolate23",
+        "quantity": 7,
+        "revenue": 2720.34,
+        "bill_id": "BILL-7129"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Jacket31",
+        "quantity": 8,
+        "revenue": 1082.72,
+        "bill_id": "BILL-2294"
+    },
+    {
+        "date": "02-01-2026",
+        "product": "Beer86",
+        "quantity": 1,
+        "revenue": 373.22,
+        "bill_id": "BILL-2529"
+    },
+    {
+        "date": "14-11-2025",
+        "product": "Phone22",
+        "quantity": 1,
+        "revenue": 22.5,
+        "bill_id": "BILL-4463"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Dishwasher62",
+        "quantity": 2,
+        "revenue": 790.78,
+        "bill_id": "BILL-9771"
+    },
+    {
+        "date": "12-11-2025",
+        "product": "Oil91",
+        "quantity": 3,
+        "revenue": 907.74,
+        "bill_id": "BILL-4808"
+    },
+    {
+        "date": "28-11-2025",
+        "product": "Cleaner49",
+        "quantity": 3,
+        "revenue": 249.3,
+        "bill_id": "BILL-7111"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Whiskey10",
+        "quantity": 7,
+        "revenue": 1159.69,
+        "bill_id": "BILL-1680"
+    },
+    {
+        "date": "12-12-2025",
+        "product": "Soda93",
+        "quantity": 3,
+        "revenue": 1072.2,
+        "bill_id": "BILL-3305"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Apple17",
+        "quantity": 8,
+        "revenue": 688.32,
+        "bill_id": "BILL-8168"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Chocolate64",
+        "quantity": 2,
+        "revenue": 961.48,
+        "bill_id": "BILL-9073"
+    },
+    {
+        "date": "11-12-2025",
+        "product": "Cleaner77",
+        "quantity": 6,
+        "revenue": 2499.12,
+        "bill_id": "BILL-8222"
+    },
+    {
+        "date": "28-12-2025",
+        "product": "Wallet73",
+        "quantity": 8,
+        "revenue": 2705.12,
+        "bill_id": "BILL-6606"
+    },
+    {
+        "date": "24-12-2025",
+        "product": "Wheat43",
+        "quantity": 7,
+        "revenue": 2384.41,
+        "bill_id": "BILL-7124"
+    },
+    {
+        "date": "04-12-2025",
+        "product": "Apple17",
+        "quantity": 3,
+        "revenue": 258.12,
+        "bill_id": "BILL-4908"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Beer86",
+        "quantity": 8,
+        "revenue": 2985.76,
+        "bill_id": "BILL-6908"
+    },
+    {
+        "date": "13-11-2025",
+        "product": "Pizza57",
+        "quantity": 4,
+        "revenue": 920.36,
+        "bill_id": "BILL-9655"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Whiskey10",
+        "quantity": 5,
+        "revenue": 828.35,
+        "bill_id": "BILL-3605"
+    },
+    {
+        "date": "11-12-2025",
+        "product": "Towel50",
+        "quantity": 8,
+        "revenue": 3413.92,
+        "bill_id": "BILL-7007"
+    },
+    {
+        "date": "01-01-2026",
+        "product": "Book95",
+        "quantity": 10,
+        "revenue": 3348.7,
+        "bill_id": "BILL-9709"
+    },
+    {
+        "date": "25-11-2025",
+        "product": "Bread47",
+        "quantity": 8,
+        "revenue": 3114.64,
+        "bill_id": "BILL-9207"
+    },
+    {
+        "date": "24-12-2025",
+        "product": "Tea96",
+        "quantity": 6,
+        "revenue": 378.96,
+        "bill_id": "BILL-1628"
+    },
+    {
+        "date": "01-12-2025",
+        "product": "Fries97",
+        "quantity": 10,
+        "revenue": 917.7,
+        "bill_id": "BILL-4985"
+    },
+    {
+        "date": "26-11-2025",
+        "product": "Chocolate11",
+        "quantity": 2,
+        "revenue": 114.6,
+        "bill_id": "BILL-7379"
+    },
+    {
+        "date": "12-11-2025",
+        "product": "Sweater26",
+        "quantity": 5,
+        "revenue": 721.3,
+        "bill_id": "BILL-7446"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Shorts82",
+        "quantity": 2,
+        "revenue": 146.9,
+        "bill_id": "BILL-4658"
+    },
+    {
+        "date": "15-11-2025",
+        "product": "Lighter27",
+        "quantity": 7,
+        "revenue": 882.21,
+        "bill_id": "BILL-4917"
+    },
+    {
+        "date": "30-12-2025",
+        "product": "Soap12",
+        "quantity": 7,
+        "revenue": 614.46,
+        "bill_id": "BILL-3553"
+    },
+    {
+        "date": "28-12-2025",
+        "product": "Shampoo59",
+        "quantity": 4,
+        "revenue": 1408.6,
+        "bill_id": "BILL-7134"
+    },
+    {
+        "date": "01-01-2026",
+        "product": "Coat90",
+        "quantity": 9,
+        "revenue": 3960.09,
+        "bill_id": "BILL-4234"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Oil21",
+        "quantity": 8,
+        "revenue": 3968.72,
+        "bill_id": "BILL-3490"
+    },
+    {
+        "date": "09-11-2025",
+        "product": "Pants44",
+        "quantity": 2,
+        "revenue": 142.78,
+        "bill_id": "BILL-9210"
+    },
+    {
+        "date": "21-11-2025",
+        "product": "Phone79",
+        "quantity": 4,
+        "revenue": 1756.96,
+        "bill_id": "BILL-8681"
+    },
+    {
+        "date": "20-12-2025",
+        "product": "Phone79",
+        "quantity": 4,
+        "revenue": 1756.96,
+        "bill_id": "BILL-3941"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Water32",
+        "quantity": 9,
+        "revenue": 4359.33,
+        "bill_id": "BILL-5538"
+    },
+    {
+        "date": "18-12-2025",
+        "product": "Shampoo59",
+        "quantity": 1,
+        "revenue": 352.15,
+        "bill_id": "BILL-4976"
+    },
+    {
+        "date": "10-11-2025",
+        "product": "Deodorant2",
+        "quantity": 2,
+        "revenue": 486.68,
+        "bill_id": "BILL-4817"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Cleaner49",
+        "quantity": 2,
+        "revenue": 166.2,
+        "bill_id": "BILL-7561"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Towel56",
+        "quantity": 10,
+        "revenue": 2471.9,
+        "bill_id": "BILL-4458"
+    },
+    {
+        "date": "12-12-2025",
+        "product": "Soap12",
+        "quantity": 1,
+        "revenue": 87.78,
+        "bill_id": "BILL-8921"
+    },
+    {
+        "date": "28-11-2025",
+        "product": "Socks55",
+        "quantity": 8,
+        "revenue": 95.2,
+        "bill_id": "BILL-1319"
+    },
+    {
+        "date": "14-11-2025",
+        "product": "Cleaner49",
+        "quantity": 1,
+        "revenue": 83.1,
+        "bill_id": "BILL-2452"
+    },
+    {
+        "date": "16-11-2025",
+        "product": "Brush38",
+        "quantity": 8,
+        "revenue": 843.76,
+        "bill_id": "BILL-9947"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Router19",
+        "quantity": 10,
+        "revenue": 730.8,
+        "bill_id": "BILL-3059"
+    },
+    {
+        "date": "28-11-2025",
+        "product": "Matchbox40",
+        "quantity": 5,
+        "revenue": 1318.85,
+        "bill_id": "BILL-5742"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Shampoo59",
+        "quantity": 5,
+        "revenue": 1760.75,
+        "bill_id": "BILL-4317"
+    },
+    {
+        "date": "17-11-2025",
+        "product": "Vodka36",
+        "quantity": 1,
+        "revenue": 343.97,
+        "bill_id": "BILL-8490"
+    },
+    {
+        "date": "10-11-2025",
+        "product": "Towel50",
+        "quantity": 10,
+        "revenue": 4267.4,
+        "bill_id": "BILL-7462"
+    },
+    {
+        "date": "05-12-2025",
+        "product": "Deodorant2",
+        "quantity": 6,
+        "revenue": 1460.04,
+        "bill_id": "BILL-7115"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Sweater53",
+        "quantity": 10,
+        "revenue": 1482.8,
+        "bill_id": "BILL-9677"
+    },
+    {
+        "date": "06-11-2025",
+        "product": "Speaker15",
+        "quantity": 8,
+        "revenue": 3402.96,
+        "bill_id": "BILL-2224"
+    },
+    {
+        "date": "07-12-2025",
+        "product": "Brush84",
+        "quantity": 2,
+        "revenue": 346.86,
+        "bill_id": "BILL-9483"
+    },
+    {
+        "date": "09-11-2025",
+        "product": "Whiskey63",
+        "quantity": 8,
+        "revenue": 2538.64,
+        "bill_id": "BILL-6773"
+    },
+    {
+        "date": "06-11-2025",
+        "product": "Vodka36",
+        "quantity": 9,
+        "revenue": 3095.73,
+        "bill_id": "BILL-2592"
+    },
+    {
+        "date": "28-11-2025",
+        "product": "Pen78",
+        "quantity": 10,
+        "revenue": 546.6,
+        "bill_id": "BILL-1693"
+    },
+    {
+        "date": "03-12-2025",
+        "product": "Soda93",
+        "quantity": 2,
+        "revenue": 714.8,
+        "bill_id": "BILL-6630"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Lens66",
+        "quantity": 5,
+        "revenue": 1699.4,
+        "bill_id": "BILL-8365"
+    },
+    {
+        "date": "24-12-2025",
+        "product": "Gloves35",
+        "quantity": 8,
+        "revenue": 3405.28,
+        "bill_id": "BILL-6153"
+    },
+    {
+        "date": "30-12-2025",
+        "product": "Detergent72",
+        "quantity": 9,
+        "revenue": 1025.1,
+        "bill_id": "BILL-3259"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Towel85",
+        "quantity": 3,
+        "revenue": 473.97,
+        "bill_id": "BILL-2270"
+    },
+    {
+        "date": "22-11-2025",
+        "product": "Fries83",
+        "quantity": 6,
+        "revenue": 2848.56,
+        "bill_id": "BILL-8086"
+    },
+    {
+        "date": "16-12-2025",
+        "product": "Cleaner49",
+        "quantity": 6,
+        "revenue": 498.6,
+        "bill_id": "BILL-4087"
+    },
+    {
+        "date": "23-11-2025",
+        "product": "Chocolate11",
+        "quantity": 7,
+        "revenue": 401.1,
+        "bill_id": "BILL-4926"
+    },
+    {
+        "date": "30-12-2025",
+        "product": "Pen78",
+        "quantity": 6,
+        "revenue": 327.96,
+        "bill_id": "BILL-1982"
+    },
+    {
+        "date": "01-12-2025",
+        "product": "Phone22",
+        "quantity": 8,
+        "revenue": 180.0,
+        "bill_id": "BILL-4361"
+    },
+    {
+        "date": "13-12-2025",
+        "product": "Tobacco51",
+        "quantity": 8,
+        "revenue": 2532.48,
+        "bill_id": "BILL-2072"
+    },
+    {
+        "date": "15-11-2025",
+        "product": "Cream98",
+        "quantity": 1,
+        "revenue": 267.15,
+        "bill_id": "BILL-1087"
+    },
+    {
+        "date": "25-12-2025",
+        "product": "Deodorant54",
+        "quantity": 9,
+        "revenue": 677.79,
+        "bill_id": "BILL-1857"
+    },
+    {
+        "date": "01-12-2025",
+        "product": "Lighter27",
+        "quantity": 5,
+        "revenue": 630.15,
+        "bill_id": "BILL-9791"
+    },
+    {
+        "date": "18-11-2025",
+        "product": "Soda93",
+        "quantity": 9,
+        "revenue": 3216.6,
+        "bill_id": "BILL-1829"
+    },
+    {
+        "date": "29-11-2025",
+        "product": "Thermometer16",
+        "quantity": 3,
+        "revenue": 337.05,
+        "bill_id": "BILL-8906"
+    },
+    {
+        "date": "11-11-2025",
+        "product": "Apple17",
+        "quantity": 6,
+        "revenue": 516.24,
+        "bill_id": "BILL-9228"
+    },
+    {
+        "date": "19-12-2025",
+        "product": "Cream98",
+        "quantity": 6,
+        "revenue": 1602.9,
+        "bill_id": "BILL-2976"
+    },
+    {
+        "date": "14-12-2025",
+        "product": "Coat42",
+        "quantity": 9,
+        "revenue": 1804.23,
+        "bill_id": "BILL-9162"
+    },
+    {
+        "date": "01-01-2026",
+        "product": "Towel45",
+        "quantity": 2,
+        "revenue": 187.08,
+        "bill_id": "BILL-8665"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Tripod5",
+        "quantity": 7,
+        "revenue": 1459.57,
+        "bill_id": "BILL-4143"
+    },
+    {
+        "date": "30-12-2025",
+        "product": "Coat42",
+        "quantity": 4,
+        "revenue": 801.88,
+        "bill_id": "BILL-8407"
+    },
+    {
+        "date": "22-12-2025",
+        "product": "Towel50",
+        "quantity": 1,
+        "revenue": 426.74,
+        "bill_id": "BILL-2031"
+    },
+    {
+        "date": "12-12-2025",
+        "product": "Deodorant80",
+        "quantity": 2,
+        "revenue": 148.58,
+        "bill_id": "BILL-8008"
+    },
+    {
+        "date": "08-11-2025",
+        "product": "Sweater53",
+        "quantity": 1,
+        "revenue": 148.28,
+        "bill_id": "BILL-6215"
+    },
+    {
+        "date": "08-11-2025",
+        "product": "Whiskey10",
+        "quantity": 10,
+        "revenue": 1656.7,
+        "bill_id": "BILL-4672"
+    }
+]

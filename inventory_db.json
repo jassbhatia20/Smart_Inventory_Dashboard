@@ -1,56 +1,902 @@
 [
     {
         "ID": 1,
-        "Name": "Apple",
+        "Name": "Cable1",
         "Category": "Food",
-        "Price": 50.0,
-        "Quantity": 100,
+        "Price": 249.65,
+        "Quantity": 5,
         "Measurement Category": "Units",
-        "Expiry Date": "31-12-2026"
-    },
-    {
-        "ID": 3,
-        "Name": "Bread",
-        "Category": "Bakery",
-        "Price": 20.0,
-        "Quantity": 3,
-        "Measurement Category": "Packets",
-        "Expiry Date": "10-01-2026"
-    },
-    {
-        "ID": 4,
-        "Name": "Banana",
-        "Category": "Food",
-        "Price": 10.0,
-        "Quantity": 200,
-        "Measurement Category": "Kilograms",
-        "Expiry Date": "15-02-2026"
-    },
-    {
-        "ID": 14,
-        "Name": "Desk",
-        "Category": "Unit",
-        "Price": 10.59,
-        "Quantity": 2,
-        "Measurement Category": "Units",
-        "Expiry Date": "22-01-2026"
+        "Expiry Date": "13-10-2026"
     },
     {
         "ID": 2,
-        "Name": "Milk",
+        "Name": "Deodorant2",
+        "Category": "Household",
+        "Price": 243.34,
+        "Quantity": 48,
+        "Measurement Category": "Units",
+        "Expiry Date": "18-05-2026"
+    },
+    {
+        "ID": 3,
+        "Name": "Dress3",
+        "Category": "Food",
+        "Price": 425.69,
+        "Quantity": 265,
+        "Measurement Category": "Liters",
+        "Expiry Date": "09-11-2026"
+    },
+    {
+        "ID": 4,
+        "Name": "Tripod4",
+        "Category": "Stationery",
+        "Price": 384.85,
+        "Quantity": 375,
+        "Measurement Category": "Liters",
+        "Expiry Date": "19-07-2026"
+    },
+    {
+        "ID": 5,
+        "Name": "Tripod5",
+        "Category": "Clothing",
+        "Price": 208.51,
+        "Quantity": 346,
+        "Measurement Category": "Units",
+        "Expiry Date": "08-08-2026"
+    },
+    {
+        "ID": 6,
+        "Name": "Milk6",
+        "Category": "Snacks",
+        "Price": 147.92,
+        "Quantity": 278,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "04-10-2026"
+    },
+    {
+        "ID": 7,
+        "Name": "Fries7",
+        "Category": "Snacks",
+        "Price": 282.63,
+        "Quantity": 303,
+        "Measurement Category": "Liters",
+        "Expiry Date": "23-12-2026"
+    },
+    {
+        "ID": 8,
+        "Name": "Shirt8",
+        "Category": "Electronics",
+        "Price": 297.51,
+        "Quantity": 13,
+        "Measurement Category": "Liters",
+        "Expiry Date": "03-09-2026"
+    },
+    {
+        "ID": 9,
+        "Name": "Biscuit9",
+        "Category": "Food",
+        "Price": 327.53,
+        "Quantity": 219,
+        "Measurement Category": "Liters",
+        "Expiry Date": "12-03-2026"
+    },
+    {
+        "ID": 10,
+        "Name": "Whiskey10",
+        "Category": "Beverages",
+        "Price": 165.67,
+        "Quantity": 178,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "07-08-2026"
+    },
+    {
+        "ID": 11,
+        "Name": "Chocolate11",
+        "Category": "Household",
+        "Price": 57.3,
+        "Quantity": 77,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "02-01-2027"
+    },
+    {
+        "ID": 12,
+        "Name": "Soap12",
         "Category": "Dairy",
-        "Price": 30.0,
-        "Quantity": 50,
+        "Price": 87.78,
+        "Quantity": 379,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "31-12-2026"
+    },
+    {
+        "ID": 13,
+        "Name": "Tea13",
+        "Category": "Bakery",
+        "Price": 261.06,
+        "Quantity": 69,
+        "Measurement Category": "Packets",
+        "Expiry Date": "17-10-2026"
+    },
+    {
+        "ID": 14,
+        "Name": "Phone14",
+        "Category": "Stationery",
+        "Price": 360.58,
+        "Quantity": 448,
+        "Measurement Category": "Packets",
+        "Expiry Date": "16-03-2026"
+    },
+    {
+        "ID": 15,
+        "Name": "Speaker15",
+        "Category": "Electronics",
+        "Price": 425.37,
+        "Quantity": 176,
+        "Measurement Category": "Packets",
+        "Expiry Date": "30-07-2026"
+    },
+    {
+        "ID": 16,
+        "Name": "Thermometer16",
+        "Category": "Clothing",
+        "Price": 112.35,
+        "Quantity": 226,
+        "Measurement Category": "Units",
+        "Expiry Date": "03-04-2026"
+    },
+    {
+        "ID": 17,
+        "Name": "Apple17",
+        "Category": "Stationery",
+        "Price": 86.04,
+        "Quantity": 286,
+        "Measurement Category": "Units",
+        "Expiry Date": "08-05-2026"
+    },
+    {
+        "ID": 18,
+        "Name": "Cable18",
+        "Category": "Snacks",
+        "Price": 187.83,
+        "Quantity": 277,
+        "Measurement Category": "Packets",
+        "Expiry Date": "28-05-2026"
+    },
+    {
+        "ID": 19,
+        "Name": "Router19",
+        "Category": "Household",
+        "Price": 73.08,
+        "Quantity": 46,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "17-05-2026"
+    },
+    {
+        "ID": 20,
+        "Name": "Bracelet20",
+        "Category": "Personal Care",
+        "Price": 487.97,
+        "Quantity": 354,
+        "Measurement Category": "Packets",
+        "Expiry Date": "08-10-2026"
+    },
+    {
+        "ID": 21,
+        "Name": "Oil21",
+        "Category": "Bakery",
+        "Price": 496.09,
+        "Quantity": 251,
+        "Measurement Category": "Units",
+        "Expiry Date": "17-09-2026"
+    },
+    {
+        "ID": 22,
+        "Name": "Phone22",
+        "Category": "Personal Care",
+        "Price": 22.5,
+        "Quantity": 292,
+        "Measurement Category": "Liters",
+        "Expiry Date": "03-03-2026"
+    },
+    {
+        "ID": 23,
+        "Name": "Chocolate23",
+        "Category": "Electronics",
+        "Price": 388.62,
+        "Quantity": 341,
+        "Measurement Category": "Packets",
+        "Expiry Date": "18-09-2026"
+    },
+    {
+        "ID": 24,
+        "Name": "Oil24",
+        "Category": "Bakery",
+        "Price": 250.55,
+        "Quantity": 288,
+        "Measurement Category": "Units",
+        "Expiry Date": "28-03-2026"
+    },
+    {
+        "ID": 25,
+        "Name": "Lighter25",
+        "Category": "Electronics",
+        "Price": 50.27,
+        "Quantity": 120,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "27-05-2026"
+    },
+    {
+        "ID": 26,
+        "Name": "Sweater26",
+        "Category": "Stationery",
+        "Price": 144.26,
+        "Quantity": 235,
+        "Measurement Category": "Units",
+        "Expiry Date": "04-06-2026"
+    },
+    {
+        "ID": 27,
+        "Name": "Lighter27",
+        "Category": "Snacks",
+        "Price": 126.03,
+        "Quantity": 473,
+        "Measurement Category": "Liters",
+        "Expiry Date": "09-07-2026"
+    },
+    {
+        "ID": 28,
+        "Name": "Belt28",
+        "Category": "Dairy",
+        "Price": 234.67,
+        "Quantity": 430,
+        "Measurement Category": "Liters",
+        "Expiry Date": "21-12-2026"
+    },
+    {
+        "ID": 29,
+        "Name": "Mouse29",
+        "Category": "Snacks",
+        "Price": 35.5,
+        "Quantity": 259,
+        "Measurement Category": "Units",
+        "Expiry Date": "20-03-2026"
+    },
+    {
+        "ID": 30,
+        "Name": "Book30",
+        "Category": "Dairy",
+        "Price": 485.23,
+        "Quantity": 157,
+        "Measurement Category": "Liters",
+        "Expiry Date": "10-05-2026"
+    },
+    {
+        "ID": 31,
+        "Name": "Jacket31",
+        "Category": "Electronics",
+        "Price": 135.34,
+        "Quantity": 188,
+        "Measurement Category": "Units",
+        "Expiry Date": "10-11-2026"
+    },
+    {
+        "ID": 32,
+        "Name": "Water32",
+        "Category": "Household",
+        "Price": 484.37,
+        "Quantity": 70,
+        "Measurement Category": "Liters",
+        "Expiry Date": "12-10-2026"
+    },
+    {
+        "ID": 33,
+        "Name": "Bulb33",
+        "Category": "Stationery",
+        "Price": 451.6,
+        "Quantity": 333,
+        "Measurement Category": "Units",
+        "Expiry Date": "18-06-2026"
+    },
+    {
+        "ID": 34,
+        "Name": "Hat34",
+        "Category": "Beverages",
+        "Price": 50.05,
+        "Quantity": 200,
+        "Measurement Category": "Liters",
+        "Expiry Date": "23-08-2026"
+    },
+    {
+        "ID": 35,
+        "Name": "Gloves35",
+        "Category": "Beverages",
+        "Price": 425.66,
+        "Quantity": 30,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "02-08-2026"
+    },
+    {
+        "ID": 36,
+        "Name": "Vodka36",
+        "Category": "Clothing",
+        "Price": 343.97,
+        "Quantity": 397,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "24-02-2026"
+    },
+    {
+        "ID": 37,
+        "Name": "Tie37",
+        "Category": "Clothing",
+        "Price": 170.14,
+        "Quantity": 158,
+        "Measurement Category": "Packets",
+        "Expiry Date": "25-10-2026"
+    },
+    {
+        "ID": 38,
+        "Name": "Brush38",
+        "Category": "Beverages",
+        "Price": 105.47,
+        "Quantity": 255,
         "Measurement Category": "Liters",
         "Expiry Date": "expired"
     },
     {
-        "ID": 5,
-        "Name": "Cheese",
+        "ID": 39,
+        "Name": "Cheese39",
+        "Category": "Stationery",
+        "Price": 116.12,
+        "Quantity": 61,
+        "Measurement Category": "Packets",
+        "Expiry Date": "13-01-2026"
+    },
+    {
+        "ID": 40,
+        "Name": "Matchbox40",
         "Category": "Dairy",
-        "Price": 150.0,
-        "Quantity": 10,
+        "Price": 263.77,
+        "Quantity": 282,
         "Measurement Category": "Kilograms",
+        "Expiry Date": "21-01-2026"
+    },
+    {
+        "ID": 41,
+        "Name": "Blouse41",
+        "Category": "Bakery",
+        "Price": 465.94,
+        "Quantity": 277,
+        "Measurement Category": "Packets",
+        "Expiry Date": "25-05-2026"
+    },
+    {
+        "ID": 42,
+        "Name": "Coat42",
+        "Category": "Dairy",
+        "Price": 200.47,
+        "Quantity": 156,
+        "Measurement Category": "Liters",
+        "Expiry Date": "23-05-2026"
+    },
+    {
+        "ID": 43,
+        "Name": "Wheat43",
+        "Category": "Snacks",
+        "Price": 340.63,
+        "Quantity": 71,
+        "Measurement Category": "Packets",
+        "Expiry Date": "16-12-2026"
+    },
+    {
+        "ID": 44,
+        "Name": "Pants44",
+        "Category": "Clothing",
+        "Price": 71.39,
+        "Quantity": 104,
+        "Measurement Category": "Packets",
+        "Expiry Date": "14-01-2026"
+    },
+    {
+        "ID": 45,
+        "Name": "Towel45",
+        "Category": "Household",
+        "Price": 93.54,
+        "Quantity": 334,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "03-01-2027"
+    },
+    {
+        "ID": 46,
+        "Name": "Soda46",
+        "Category": "Food",
+        "Price": 138.19,
+        "Quantity": 339,
+        "Measurement Category": "Units",
+        "Expiry Date": "18-02-2026"
+    },
+    {
+        "ID": 47,
+        "Name": "Bread47",
+        "Category": "Personal Care",
+        "Price": 389.33,
+        "Quantity": 23,
+        "Measurement Category": "Units",
+        "Expiry Date": "07-02-2026"
+    },
+    {
+        "ID": 48,
+        "Name": "Whiskey48",
+        "Category": "Food",
+        "Price": 125.35,
+        "Quantity": 211,
+        "Measurement Category": "Packets",
+        "Expiry Date": "19-05-2026"
+    },
+    {
+        "ID": 49,
+        "Name": "Cleaner49",
+        "Category": "Household",
+        "Price": 83.1,
+        "Quantity": 173,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "07-12-2026"
+    },
+    {
+        "ID": 50,
+        "Name": "Towel50",
+        "Category": "Stationery",
+        "Price": 426.74,
+        "Quantity": 459,
+        "Measurement Category": "Liters",
+        "Expiry Date": "10-02-2026"
+    },
+    {
+        "ID": 51,
+        "Name": "Tobacco51",
+        "Category": "Food",
+        "Price": 316.56,
+        "Quantity": 129,
+        "Measurement Category": "Liters",
+        "Expiry Date": "22-07-2026"
+    },
+    {
+        "ID": 52,
+        "Name": "Soap52",
+        "Category": "Snacks",
+        "Price": 290.8,
+        "Quantity": 124,
+        "Measurement Category": "Liters",
         "Expiry Date": "expired"
+    },
+    {
+        "ID": 53,
+        "Name": "Sweater53",
+        "Category": "Clothing",
+        "Price": 148.28,
+        "Quantity": 44,
+        "Measurement Category": "Liters",
+        "Expiry Date": "17-04-2026"
+    },
+    {
+        "ID": 54,
+        "Name": "Deodorant54",
+        "Category": "Stationery",
+        "Price": 75.31,
+        "Quantity": 226,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "17-08-2026"
+    },
+    {
+        "ID": 55,
+        "Name": "Socks55",
+        "Category": "Stationery",
+        "Price": 11.9,
+        "Quantity": 427,
+        "Measurement Category": "Packets",
+        "Expiry Date": "23-12-2026"
+    },
+    {
+        "ID": 56,
+        "Name": "Towel56",
+        "Category": "Household",
+        "Price": 247.19,
+        "Quantity": 114,
+        "Measurement Category": "Packets",
+        "Expiry Date": "08-05-2026"
+    },
+    {
+        "ID": 57,
+        "Name": "Pizza57",
+        "Category": "Snacks",
+        "Price": 230.09,
+        "Quantity": 134,
+        "Measurement Category": "Packets",
+        "Expiry Date": "26-07-2026"
+    },
+    {
+        "ID": 58,
+        "Name": "Candy58",
+        "Category": "Stationery",
+        "Price": 64.6,
+        "Quantity": 215,
+        "Measurement Category": "Liters",
+        "Expiry Date": "05-02-2026"
+    },
+    {
+        "ID": 59,
+        "Name": "Shampoo59",
+        "Category": "Beverages",
+        "Price": 352.15,
+        "Quantity": 23,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "28-05-2026"
+    },
+    {
+        "ID": 60,
+        "Name": "Candy60",
+        "Category": "Bakery",
+        "Price": 378.39,
+        "Quantity": 340,
+        "Measurement Category": "Liters",
+        "Expiry Date": "23-03-2026"
+    },
+    {
+        "ID": 61,
+        "Name": "Butter61",
+        "Category": "Food",
+        "Price": 139.42,
+        "Quantity": 56,
+        "Measurement Category": "Packets",
+        "Expiry Date": "29-08-2026"
+    },
+    {
+        "ID": 62,
+        "Name": "Dishwasher62",
+        "Category": "Dairy",
+        "Price": 395.39,
+        "Quantity": 366,
+        "Measurement Category": "Units",
+        "Expiry Date": "13-07-2026"
+    },
+    {
+        "ID": 63,
+        "Name": "Whiskey63",
+        "Category": "Household",
+        "Price": 317.33,
+        "Quantity": 118,
+        "Measurement Category": "Units",
+        "Expiry Date": "20-03-2026"
+    },
+    {
+        "ID": 64,
+        "Name": "Chocolate64",
+        "Category": "Beverages",
+        "Price": 480.74,
+        "Quantity": 413,
+        "Measurement Category": "Packets",
+        "Expiry Date": "28-02-2026"
+    },
+    {
+        "ID": 65,
+        "Name": "Bleach65",
+        "Category": "Food",
+        "Price": 446.71,
+        "Quantity": 210,
+        "Measurement Category": "Packets",
+        "Expiry Date": "16-09-2026"
+    },
+    {
+        "ID": 66,
+        "Name": "Lens66",
+        "Category": "Snacks",
+        "Price": 339.88,
+        "Quantity": 22,
+        "Measurement Category": "Liters",
+        "Expiry Date": "13-09-2026"
+    },
+    {
+        "ID": 67,
+        "Name": "Mask67",
+        "Category": "Snacks",
+        "Price": 56.25,
+        "Quantity": 485,
+        "Measurement Category": "Units",
+        "Expiry Date": "12-02-2026"
+    },
+    {
+        "ID": 68,
+        "Name": "Banana68",
+        "Category": "Personal Care",
+        "Price": 433.92,
+        "Quantity": 113,
+        "Measurement Category": "Liters",
+        "Expiry Date": "06-09-2026"
+    },
+    {
+        "ID": 69,
+        "Name": "Cake69",
+        "Category": "Snacks",
+        "Price": 239.19,
+        "Quantity": 427,
+        "Measurement Category": "Liters",
+        "Expiry Date": "04-04-2026"
+    },
+    {
+        "ID": 70,
+        "Name": "Cleaner70",
+        "Category": "Food",
+        "Price": 29.91,
+        "Quantity": 363,
+        "Measurement Category": "Packets",
+        "Expiry Date": "30-11-2026"
+    },
+    {
+        "ID": 71,
+        "Name": "Jeans71",
+        "Category": "Food",
+        "Price": 113.39,
+        "Quantity": 144,
+        "Measurement Category": "Liters",
+        "Expiry Date": "28-08-2026"
+    },
+    {
+        "ID": 72,
+        "Name": "Detergent72",
+        "Category": "Clothing",
+        "Price": 113.9,
+        "Quantity": 142,
+        "Measurement Category": "Liters",
+        "Expiry Date": "12-04-2026"
+    },
+    {
+        "ID": 73,
+        "Name": "Wallet73",
+        "Category": "Electronics",
+        "Price": 338.14,
+        "Quantity": 79,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "24-11-2026"
+    },
+    {
+        "ID": 74,
+        "Name": "Fries74",
+        "Category": "Snacks",
+        "Price": 317.34,
+        "Quantity": 23,
+        "Measurement Category": "Packets",
+        "Expiry Date": "15-11-2026"
+    },
+    {
+        "ID": 75,
+        "Name": "Dishwasher75",
+        "Category": "Beverages",
+        "Price": 378.71,
+        "Quantity": 171,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "16-08-2026"
+    },
+    {
+        "ID": 76,
+        "Name": "Tripod76",
+        "Category": "Snacks",
+        "Price": 458.75,
+        "Quantity": 133,
+        "Measurement Category": "Liters",
+        "Expiry Date": "11-01-2026"
+    },
+    {
+        "ID": 77,
+        "Name": "Cleaner77",
+        "Category": "Stationery",
+        "Price": 416.52,
+        "Quantity": 147,
+        "Measurement Category": "Units",
+        "Expiry Date": "29-07-2026"
+    },
+    {
+        "ID": 78,
+        "Name": "Pen78",
+        "Category": "Beverages",
+        "Price": 54.66,
+        "Quantity": 229,
+        "Measurement Category": "Liters",
+        "Expiry Date": "27-03-2026"
+    },
+    {
+        "ID": 79,
+        "Name": "Phone79",
+        "Category": "Clothing",
+        "Price": 439.24,
+        "Quantity": 418,
+        "Measurement Category": "Packets",
+        "Expiry Date": "expired"
+    },
+    {
+        "ID": 80,
+        "Name": "Deodorant80",
+        "Category": "Electronics",
+        "Price": 74.29,
+        "Quantity": 269,
+        "Measurement Category": "Units",
+        "Expiry Date": "26-01-2026"
+    },
+    {
+        "ID": 81,
+        "Name": "Cream81",
+        "Category": "Stationery",
+        "Price": 89.67,
+        "Quantity": 490,
+        "Measurement Category": "Liters",
+        "Expiry Date": "21-11-2026"
+    },
+    {
+        "ID": 82,
+        "Name": "Shorts82",
+        "Category": "Food",
+        "Price": 73.45,
+        "Quantity": 249,
+        "Measurement Category": "Packets",
+        "Expiry Date": "04-12-2026"
+    },
+    {
+        "ID": 83,
+        "Name": "Fries83",
+        "Category": "Electronics",
+        "Price": 474.76,
+        "Quantity": 159,
+        "Measurement Category": "Units",
+        "Expiry Date": "18-11-2026"
+    },
+    {
+        "ID": 84,
+        "Name": "Brush84",
+        "Category": "Household",
+        "Price": 173.43,
+        "Quantity": 128,
+        "Measurement Category": "Packets",
+        "Expiry Date": "28-01-2026"
+    },
+    {
+        "ID": 85,
+        "Name": "Towel85",
+        "Category": "Personal Care",
+        "Price": 157.99,
+        "Quantity": 157,
+        "Measurement Category": "Packets",
+        "Expiry Date": "10-05-2026"
+    },
+    {
+        "ID": 86,
+        "Name": "Beer86",
+        "Category": "Household",
+        "Price": 373.22,
+        "Quantity": 32,
+        "Measurement Category": "Liters",
+        "Expiry Date": "03-09-2026"
+    },
+    {
+        "ID": 87,
+        "Name": "Hat87",
+        "Category": "Food",
+        "Price": 267.03,
+        "Quantity": 297,
+        "Measurement Category": "Liters",
+        "Expiry Date": "expired"
+    },
+    {
+        "ID": 88,
+        "Name": "Whiskey88",
+        "Category": "Stationery",
+        "Price": 5.84,
+        "Quantity": 480,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "27-01-2026"
+    },
+    {
+        "ID": 89,
+        "Name": "Coffee89",
+        "Category": "Snacks",
+        "Price": 322.78,
+        "Quantity": 83,
+        "Measurement Category": "Units",
+        "Expiry Date": "16-10-2026"
+    },
+    {
+        "ID": 90,
+        "Name": "Coat90",
+        "Category": "Household",
+        "Price": 440.01,
+        "Quantity": 165,
+        "Measurement Category": "Units",
+        "Expiry Date": "04-07-2026"
+    },
+    {
+        "ID": 91,
+        "Name": "Oil91",
+        "Category": "Beverages",
+        "Price": 302.58,
+        "Quantity": 63,
+        "Measurement Category": "Units",
+        "Expiry Date": "07-08-2026"
+    },
+    {
+        "ID": 92,
+        "Name": "Pants92",
+        "Category": "Dairy",
+        "Price": 11.43,
+        "Quantity": 277,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "02-12-2026"
+    },
+    {
+        "ID": 93,
+        "Name": "Soda93",
+        "Category": "Bakery",
+        "Price": 357.4,
+        "Quantity": 174,
+        "Measurement Category": "Packets",
+        "Expiry Date": "25-09-2026"
+    },
+    {
+        "ID": 94,
+        "Name": "Pen94",
+        "Category": "Beverages",
+        "Price": 120.87,
+        "Quantity": 287,
+        "Measurement Category": "Units",
+        "Expiry Date": "12-12-2026"
+    },
+    {
+        "ID": 95,
+        "Name": "Book95",
+        "Category": "Household",
+        "Price": 334.87,
+        "Quantity": 460,
+        "Measurement Category": "Liters",
+        "Expiry Date": "31-10-2026"
+    },
+    {
+        "ID": 96,
+        "Name": "Tea96",
+        "Category": "Snacks",
+        "Price": 63.16,
+        "Quantity": 376,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "24-02-2026"
+    },
+    {
+        "ID": 97,
+        "Name": "Fries97",
+        "Category": "Beverages",
+        "Price": 91.77,
+        "Quantity": 81,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "23-11-2026"
+    },
+    {
+        "ID": 98,
+        "Name": "Cream98",
+        "Category": "Food",
+        "Price": 267.15,
+        "Quantity": 239,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "12-04-2026"
+    },
+    {
+        "ID": 99,
+        "Name": "Vodka99",
+        "Category": "Bakery",
+        "Price": 333.12,
+        "Quantity": 60,
+        "Measurement Category": "Units",
+        "Expiry Date": "expired"
+    },
+    {
+        "ID": 100,
+        "Name": "Bracelet100",
+        "Category": "Bakery",
+        "Price": 324.5,
+        "Quantity": 75,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "13-10-2026"
     }
 ]
