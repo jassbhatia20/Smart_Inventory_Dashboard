@@ -9,6 +9,7 @@ It is built with **Streamlit** for an intuitive web interface, using Python data
 ---
 
 ## Key Features
+* **Visual Analytics:** Interactive charts and graphs for sales trends, expense analysis, and inventory insights with color-coded dashboards using Streamlit's built-in charting.
 * **Smart Validation:** Prevents duplicate Product IDs. Allows multiple products with the same name (differentiated by ID).
 * **Comprehensive Product Details:** Add products with ID, Name, Category, Price, Quantity (with measurement categories: Units, Kilograms, Liters, Packets), and Expiry Date.
 * **Automatic Expiry Tracking:** Products automatically marked as "expired" when their expiry date passes.
@@ -68,8 +69,8 @@ It is built with **Streamlit** for an intuitive web interface, using Python data
 - **Update Price**: Change product price.
 - **Remove Product**: Delete a product.
 - **Search Product**: Search by name and view results.
-- **View Sales Report**: See sales history and revenue.
-- **View Expenses**: See purchase expenses and total costs.
+- **View Sales Report**: Interactive sales analytics with revenue trends, top products, and transaction insights.
+- **View Expenses**: Comprehensive expense analysis with supplier breakdowns and cost trends.
 - **Export to CSV**: Download inventory as CSV.
 
 ### Menu Options:

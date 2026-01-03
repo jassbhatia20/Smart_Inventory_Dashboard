@@ -9,6 +9,13 @@ import io
 import sqlite3
 import random
 
+def round_quantity(quantity, measurement_category):
+    """Round quantity based on measurement category"""
+    if measurement_category in ['Units', 'Packets']:
+        return round(quantity, 0)
+    else:  # Kilograms, Liters
+        return round(quantity, 3)
+
 # Database functions
 def get_products():
     conn = sqlite3.connect('inventory.db')
@@ -22,7 +29,7 @@ def get_products():
             'Name': row[1],
             'Category': row[2],
             'Price': row[3],
-            'Quantity': row[4],
+            'Quantity': round_quantity(row[4], row[5]),
             'Measurement Category': row[5],
             'Expiry Date': row[6]
         })
@@ -93,8 +100,9 @@ def get_expenses():
 def save_product(product):
     conn = sqlite3.connect('inventory.db')
     cursor = conn.cursor()
+    rounded_quantity = round_quantity(product['Quantity'], product['Measurement Category'])
     cursor.execute('INSERT OR REPLACE INTO products (id, name, category, price, quantity, measurement_category, expiry_date) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                   (product['ID'], product['Name'], product['Category'], product['Price'], product['Quantity'], product['Measurement Category'], product['Expiry Date']))
+                   (product['ID'], product['Name'], product['Category'], product['Price'], rounded_quantity, product['Measurement Category'], product['Expiry Date']))
     conn.commit()
     conn.close()
 
@@ -128,11 +136,6 @@ def delete_product_db(product_id):
     conn.commit()
     conn.close()
 
-active_products, expired_products = get_active_products()
-sales = get_sales()
-expenses = get_expenses()
-
-
 # Function to export inventory to CSV (in-memory)
 def export_to_csv():
     csv_data = io.StringIO()
@@ -148,51 +151,191 @@ def export_to_csv():
         writer.writerow({k: p_copy.get(k, "") for k in writer.fieldnames})
     return csv_data.getvalue()
 
+# Load data
+active_products, expired_products = get_active_products()
+sales = get_sales()
+expenses = get_expenses()
+
 # Streamlit App
-st.title("Warehouse Inventory Management")
+st.set_page_config(
+    page_title="🏪 Smart Inventory Dashboard",
+    page_icon="📦",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Custom CSS for better styling
+st.markdown("""
+<style>
+    .main-header {
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(45deg, #1e3c72, #2a5298);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .metric-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar-header {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .success-msg {
+        background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 5px solid #4CAF50;
+    }
+    .warning-msg {
+        background: linear-gradient(45deg, #ff9a9e, #fecfef);
+        color: #d32f2f;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 5px solid #f44336;
+    }
+    .info-msg {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 5px solid #2196F3;
+    }
+    .stButton>button {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    .stButton>button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .dataframe {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<h1 class="main-header">🏪 Smart Inventory Dashboard</h1>', unsafe_allow_html=True)
+
+# Sidebar header
+st.sidebar.markdown("""
+<div class="sidebar-header">
+    <h2 style="margin: 0; color: white;">📋 Operations Menu</h2>
+    <p style="margin: 5px 0 0 0; opacity: 0.9;">Choose your action</p>
+</div>
+""", unsafe_allow_html=True)
 
 menu = st.sidebar.selectbox("Select Operation", [
-    "View Inventory",
-    "Add Products",
-    "Sell Product",
-    "Purchase Stock",
-    "Update Stock",
-    "Update Price",
-    "Remove Product",
-    "Search Product",
-    "View Sales Report",
-    "View Expenses",
-    "Export to CSV"
+    "📦 View Inventory",
+    "➕ Add Products",
+    "💰 Sell Product",
+    "🛒 Purchase Stock",
+    "🔄 Update Stock",
+    "💲 Update Price",
+    "🗑️ Remove Product",
+    "🔍 Search Product",
+    "📊 View Sales Report",
+    "💸 View Expenses",
+    "📥 Export to CSV"
 ])
 
-if menu == "View Inventory":
-    st.header("Inventory Stock")
+if menu == "📦 View Inventory":
+    st.header("📦 Inventory Overview Dashboard")
+
     total_active = len(active_products)
     total_expired = len(expired_products)
     total_active_qty = sum(p.get("Quantity", 0) for p in active_products)
     total_expired_qty = sum(p.get("Quantity", 0) for p in expired_products)
-    
-    st.write(f"**Total Active Products:** {total_active} (Total Quantity: {total_active_qty})")
-    st.write(f"**Total Expired Products:** {total_expired} (Total Quantity: {total_expired_qty})")
-    
+
+    # Color-coded metrics
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Active Products", f"{total_active:,}", delta=f"{total_active}")
+    with col2:
+        st.metric("Expired Products", f"{total_expired:,}", delta=f"{total_expired}")
+    with col3:
+        st.metric("Active Quantity", f"{total_active_qty:,.1f}", delta=f"{total_active_qty:.0f}")
+    with col4:
+        st.metric("Expired Quantity", f"{total_expired_qty:,.1f}", delta=f"{total_expired_qty:.0f}")
+
+    # Inventory Status Overview
+    if active_products or expired_products:
+        st.subheader("📊 Inventory Status")
+
+        # Create status data
+        status_data = pd.DataFrame({
+            'Status': ['Active', 'Expired'],
+            'Count': [total_active, total_expired],
+            'Quantity': [total_active_qty, total_expired_qty]
+        })
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.bar_chart(status_data.set_index('Status')['Count'], use_container_width=True)
+
+        with col2:
+            # Simple pie chart representation using bars
+            st.bar_chart(status_data.set_index('Status')['Quantity'], use_container_width=True)
+
+    # Category Distribution
     if active_products:
-        st.subheader("Active Inventory")
+        st.subheader("🏷️ Product Categories")
         df_active = pd.DataFrame(active_products)
-        st.dataframe(df_active)
-    
+        category_counts = df_active['Category'].value_counts().reset_index()
+        category_counts.columns = ['Category', 'Count']
+
+        st.bar_chart(category_counts.set_index('Category')['Count'], use_container_width=True)
+
+    if active_products:
+        st.subheader("✅ Active Inventory Details")
+        df_active = pd.DataFrame(active_products)
+
+        # Color-code the dataframe based on quantity
+        def color_quantity(val):
+            if val < 5:
+                return 'background-color: #FF6B6B'  # Red for low stock
+            elif val < 20:
+                return 'background-color: #FFE66D'  # Yellow for medium
+            else:
+                return 'background-color: #4ECDC4'  # Green for good stock
+
+        styled_df = df_active.style.applymap(color_quantity, subset=['Quantity'])
+        st.dataframe(styled_df, use_container_width=True)
+
     if expired_products:
-        st.subheader("Expired Inventory")
+        st.subheader("❌ Expired Inventory Details")
         df_expired = pd.DataFrame(expired_products)
-        st.dataframe(df_expired)
-    
-    # Low Stock Alert
+        st.dataframe(df_expired.style.applymap(lambda x: 'background-color: #FF6B6B', subset=['Expiry Date']), use_container_width=True)
+
+    # Enhanced Low Stock Alert with colors
     low_stock = [p for p in active_products if p.get("Quantity", 0) < 5]
     if low_stock:
-        st.warning("Low Stock Alert (Quantity < 5):")
+        st.error("🚨 **CRITICAL: Low Stock Alert** (Quantity < 5)")
         for p in low_stock:
-            st.write(f"- {p['Name']} (ID: {p['ID']}, Quantity: {p['Quantity']})")
+            st.write(f"🔴 **{p['Name']}** (ID: {p['ID']}, Quantity: {p['Quantity']}) - **REPLENISH IMMEDIATELY**")
+    else:
+        st.success("✅ All products have sufficient stock levels!")
 
-elif menu == "Add Products":
+elif menu == "➕ Add Products":
     st.header("Add New Product")
     with st.form("add_product_form"):
         product_id = st.number_input("Product ID", min_value=1, step=1)
@@ -227,7 +370,7 @@ elif menu == "Add Products":
             except ValueError:
                 st.error("Invalid date format. Please enter in DD-MM-YYYY format.")
 
-elif menu == "Sell Product":
+elif menu == "💰 Sell Product":
     st.header("Sell Product")
     product_names = [p["Name"] for p in active_products]
     if product_names:
@@ -263,7 +406,7 @@ elif menu == "Sell Product":
     else:
         st.write("No active products available.")
 
-elif menu == "Purchase Stock":
+elif menu == "🛒 Purchase Stock":
     st.header("Purchase Stock")
     product_names = [p["Name"] for p in active_products + expired_products]
     if product_names:
@@ -288,7 +431,7 @@ elif menu == "Purchase Stock":
     else:
         st.write("No products available.")
 
-elif menu == "Update Stock":
+elif menu == "🔄 Update Stock":
     st.header("Update Inventory Stock")
     product_input = st.text_input("Enter Product ID or Name")
     if product_input:
@@ -333,7 +476,7 @@ elif menu == "Update Stock":
         else:
             st.error("Product not found.")
 
-elif menu == "Update Price":
+elif menu == "💲 Update Price":
     st.header("Update Product Price")
     product_input = st.text_input("Enter Product ID or Name")
     if product_input:
@@ -359,7 +502,7 @@ elif menu == "Update Price":
         else:
             st.error("Product not found.")
 
-elif menu == "Remove Product":
+elif menu == "🗑️ Remove Product":
     st.header("Remove Product")
     product_input = st.text_input("Enter Product ID or Name")
     if product_input:
@@ -384,7 +527,7 @@ elif menu == "Remove Product":
         else:
             st.error("Product not found.")
 
-elif menu == "Search Product":
+elif menu == "🔍 Search Product":
     st.header("Search Product")
     search_name = st.text_input("Enter Product Name")
     if search_name:
@@ -396,27 +539,128 @@ elif menu == "Search Product":
         else:
             st.error("Product not found.")
 
-elif menu == "View Sales Report":
-    st.header("Sales Report")
+elif menu == "📊 View Sales Report":
+    st.header("📊 Sales Analytics Dashboard")
+
     if sales:
         df_sales = pd.DataFrame(sales)
-        st.dataframe(df_sales)
-        total_revenue = sum(s["revenue"] for s in sales)
-        st.write(f"**Total Sales:** {len(sales)} | **Total Revenue:** INR {total_revenue}")
-    else:
-        st.write("No sales recorded yet.")
 
-elif menu == "View Expenses":
-    st.header("Expenses Report")
+        # Convert date strings to datetime for better plotting
+        df_sales['date'] = pd.to_datetime(df_sales['date'], format='%d-%m-%Y', errors='coerce')
+
+        # Summary metrics with colors
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            total_sales = len(sales)
+            st.metric("Total Transactions", f"{total_sales:,}", delta=f"+{total_sales}")
+        with col2:
+            total_revenue = sum(s["revenue"] for s in sales)
+            st.metric("Total Revenue", f"₹{total_revenue:,.2f}", delta=f"+₹{total_revenue:,.0f}")
+        with col3:
+            avg_sale = total_revenue / total_sales if total_sales > 0 else 0
+            st.metric("Average Sale", f"₹{avg_sale:.2f}")
+
+        # Revenue Over Time
+        st.subheader("💰 Revenue Trend")
+        daily_revenue = df_sales.groupby(df_sales['date'].dt.date)['revenue'].sum().reset_index()
+        daily_revenue.columns = ['Date', 'Revenue']
+
+        st.line_chart(daily_revenue.set_index('Date')['Revenue'], use_container_width=True)
+
+        # Top Selling Products
+        st.subheader("🏆 Top Selling Products")
+        product_sales = df_sales.groupby('product')['revenue'].sum().reset_index()
+        product_sales = product_sales.sort_values('revenue', ascending=False).head(10)
+
+        st.bar_chart(product_sales.set_index('product')['revenue'], use_container_width=True)
+
+        # Sales Distribution
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.subheader("🥧 Sales by Quantity")
+            quantity_sales = df_sales.groupby('product')['quantity'].sum().reset_index()
+            quantity_sales = quantity_sales.sort_values('quantity', ascending=False).head(8)
+
+            # Create a simple bar chart for quantity
+            st.bar_chart(quantity_sales.set_index('product')['quantity'], use_container_width=True)
+
+        with col2:
+            st.subheader("📈 Transaction Frequency")
+            # Group by date and count transactions
+            daily_transactions = df_sales.groupby(df_sales['date'].dt.date).size().reset_index(name='transactions')
+
+            st.bar_chart(daily_transactions.set_index('date')['transactions'], use_container_width=True)
+
+        # Detailed Data Table
+        st.subheader("📋 Detailed Sales Data")
+        st.dataframe(df_sales.style.highlight_max(axis=0), use_container_width=True)
+
+    else:
+        st.warning("📭 No sales data available. Start selling products to see analytics!")
+
+elif menu == "💸 View Expenses":
+    st.header("💸 Expense Analytics Dashboard")
+
     if expenses:
-        df_exp = pd.DataFrame(expenses)
-        st.dataframe(df_exp)
-        total_exp = sum(e["cost"] for e in expenses)
-        st.write(f"**Total Expenses:** INR {total_exp}")
-    else:
-        st.write("No expenses recorded yet.")
+        df_expenses = pd.DataFrame(expenses)
 
-elif menu == "Export to CSV":
+        # Convert date strings to datetime
+        df_expenses['date'] = pd.to_datetime(df_expenses['date'], format='%d-%m-%Y', errors='coerce')
+
+        # Summary metrics
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            total_expenses = len(expenses)
+            st.metric("Total Purchases", f"{total_expenses:,}", delta=f"+{total_expenses}")
+        with col2:
+            total_cost = sum(e["cost"] for e in expenses)
+            st.metric("Total Expenses", f"₹{total_cost:,.2f}", delta=f"+₹{total_cost:,.0f}")
+        with col3:
+            avg_cost = total_cost / total_expenses if total_expenses > 0 else 0
+            st.metric("Average Purchase", f"₹{avg_cost:.2f}")
+
+        # Expense Trend Over Time
+        st.subheader("📉 Expense Trend")
+        daily_expenses = df_expenses.groupby(df_expenses['date'].dt.date)['cost'].sum().reset_index()
+        daily_expenses.columns = ['Date', 'Cost']
+
+        st.area_chart(daily_expenses.set_index('Date')['Cost'], use_container_width=True)
+
+        # Expenses by Supplier
+        st.subheader("🏢 Expenses by Supplier")
+        if 'supplier' in df_expenses.columns:
+            supplier_expenses = df_expenses.groupby('supplier')['cost'].sum().reset_index()
+            supplier_expenses = supplier_expenses.sort_values('cost', ascending=False)
+
+            st.bar_chart(supplier_expenses.set_index('supplier')['cost'], use_container_width=True)
+
+        # Cost vs Quantity Analysis
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.subheader("📊 Cost Distribution")
+            product_expenses = df_expenses.groupby('product')['cost'].sum().reset_index()
+            product_expenses = product_expenses.sort_values('cost', ascending=False).head(8)
+
+            # Create a simple bar chart for cost distribution
+            st.bar_chart(product_expenses.set_index('product')['cost'], use_container_width=True)
+
+        with col2:
+            st.subheader("⚖️ Cost vs Quantity Analysis")
+            # Create a scatter plot data
+            scatter_data = df_expenses[['quantity', 'cost']].copy()
+            scatter_data.columns = ['Quantity', 'Cost']
+            st.scatter_chart(scatter_data, x='Quantity', y='Cost', use_container_width=True)
+
+        # Detailed Data Table
+        st.subheader("📋 Detailed Expense Data")
+        st.dataframe(df_expenses.style.highlight_max(axis=0), use_container_width=True)
+
+    else:
+        st.info("💰 No expense data available. Start purchasing stock to see analytics!")
+
+elif menu == "📥 Export to CSV":
     st.header("Export Inventory to CSV")
     csv_content = export_to_csv()
     st.download_button("Download CSV", csv_content, "inventory.csv", "text/csv")
