@@ -1,0 +1,56 @@
+[
+    {
+        "ID": 1,
+        "Name": "Apple",
+        "Category": "Food",
+        "Price": 50.0,
+        "Quantity": 100,
+        "Measurement Category": "Units",
+        "Expiry Date": "31-12-2026"
+    },
+    {
+        "ID": 3,
+        "Name": "Bread",
+        "Category": "Bakery",
+        "Price": 20.0,
+        "Quantity": 3,
+        "Measurement Category": "Packets",
+        "Expiry Date": "10-01-2026"
+    },
+    {
+        "ID": 4,
+        "Name": "Banana",
+        "Category": "Food",
+        "Price": 10.0,
+        "Quantity": 200,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "15-02-2026"
+    },
+    {
+        "ID": 14,
+        "Name": "Desk",
+        "Category": "Unit",
+        "Price": 10.59,
+        "Quantity": 2,
+        "Measurement Category": "Units",
+        "Expiry Date": "22-01-2026"
+    },
+    {
+        "ID": 2,
+        "Name": "Milk",
+        "Category": "Dairy",
+        "Price": 30.0,
+        "Quantity": 50,
+        "Measurement Category": "Liters",
+        "Expiry Date": "expired"
+    },
+    {
+        "ID": 5,
+        "Name": "Cheese",
+        "Category": "Dairy",
+        "Price": 150.0,
+        "Quantity": 10,
+        "Measurement Category": "Kilograms",
+        "Expiry Date": "expired"
+    }
+]
