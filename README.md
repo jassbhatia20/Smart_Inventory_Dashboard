@@ -4,7 +4,7 @@
 This is a robust **Web-based** tool designed to help retail owners manage their stock.
 It is built with **Streamlit** for an intuitive web interface, using Python data structures for real-time management.
 
-> **Note:** This is Version 4.0. It runs in the browser and stores data persistently in JSON files. Data is saved automatically.
+> **Note:** This is Version 4.0. It runs in the browser and stores data persistently in a SQLite database. Data is saved automatically.
 
 ---
 
@@ -21,7 +21,7 @@ It is built with **Streamlit** for an intuitive web interface, using Python data
 * **Formatted View:** Displays inventory in a clean, aligned table with all details, separated by active/expired status.
 * **Export Functionality:** Export full inventory to CSV for external analysis.
 * **CRUD Operations:** Create, Read, Update, and Delete products seamlessly.
-* **Data Persistence:** All changes are saved to `inventory_db.json`, `sales.json`, and `expenses.json` and loaded on startup.
+* **Data Persistence:** All changes are saved to `inventory.db` SQLite database and loaded on startup.
 
 ---
 
@@ -29,10 +29,9 @@ It is built with **Streamlit** for an intuitive web interface, using Python data
 * **Language:** Python 3.x
 * **Framework:** Streamlit (for web UI)
 * **Core Concepts:**
-    * **List of Dictionaries:** Used to structure complex product data.
+    * **Relational Database:** SQLite for structured data storage.
     * **Error Handling:** Built-in Streamlit validations.
     * **Data Visualization:** Pandas DataFrames for tables.
-    * **File I/O:** JSON for persistent storage.
     * **Date Handling:** Automatic expiry checks using `datetime`.
 
 ---

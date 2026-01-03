@@ -6,44 +6,131 @@ from datetime import datetime
 import csv
 import pandas as pd
 import io
-def load_data():
-    file_name = "inventory_db.json" 
-    if not os.path.exists(file_name):
-        return [], []  # Return empty lists for active and expired
-    try:
-        with open(file_name, "r") as file:
-            data = json.load(file)  # Load all data
-        # Check and update expired products
-        current_date = datetime.now().date()
-        updated = False
-        for product in data:
-            if "Expiry Date" in product and product["Expiry Date"] != "expired":
-                try:
-                    expiry_date = datetime.strptime(product["Expiry Date"], "%d-%m-%Y").date()
-                    if expiry_date < current_date:
-                        product["Expiry Date"] = "expired"
-                        updated = True
-                except ValueError:
-                    pass  # Invalid date format, skip
-        if updated:
-            # Save the updated data back to file
-            with open(file_name, "w") as file:
-                json.dump(data, file, indent=4)
-        
-        # Separate into active and expired
-        active_products = [p for p in data if p.get("Expiry Date") != "expired"]
-        expired_products = [p for p in data if p.get("Expiry Date") == "expired"]
-        return active_products, expired_products
-    except (json.JSONDecodeError, IOError):
-        return [], []  # Return empty lists if error
+import sqlite3
+import random
 
-def save_data():
-    all_products = active_products + expired_products
-    with open("inventory_db.json", "w") as file:
-        json.dump(all_products, file, indent=4)
+# Database functions
+def get_products():
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, name, category, price, quantity, measurement_category, expiry_date FROM products')
+    rows = cursor.fetchall()
+    products = []
+    for row in rows:
+        products.append({
+            'ID': row[0],
+            'Name': row[1],
+            'Category': row[2],
+            'Price': row[3],
+            'Quantity': row[4],
+            'Measurement Category': row[5],
+            'Expiry Date': row[6]
+        })
+    conn.close()
+    return products
 
-active_products, expired_products = load_data()  # Separate lists
-sales = []  # List to track sales
+def get_active_products():
+    products = get_products()
+    current_date = datetime.now().date()
+    active = []
+    expired = []
+    for p in products:
+        if p['Expiry Date'] == 'expired':
+            expired.append(p)
+        else:
+            try:
+                expiry = datetime.strptime(p['Expiry Date'], '%d-%m-%Y').date()
+                if expiry >= current_date:
+                    active.append(p)
+                else:
+                    expired.append(p)
+                    update_expiry(p['ID'], 'expired')
+            except:
+                active.append(p)
+    return active, expired
+
+def update_expiry(product_id, expiry):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('UPDATE products SET expiry_date = ? WHERE id = ?', (expiry, product_id))
+    conn.commit()
+    conn.close()
+
+def get_sales():
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT date, product, quantity, revenue, bill_id FROM sales ORDER BY date DESC')
+    rows = cursor.fetchall()
+    sales = []
+    for row in rows:
+        sales.append({
+            'date': row[0],
+            'product': row[1],
+            'quantity': row[2],
+            'revenue': row[3],
+            'bill_id': row[4]
+        })
+    conn.close()
+    return sales
+
+def get_expenses():
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT date, product, quantity, cost, supplier FROM expenses ORDER BY date DESC')
+    rows = cursor.fetchall()
+    expenses = []
+    for row in rows:
+        expenses.append({
+            'date': row[0],
+            'product': row[1],
+            'quantity': row[2],
+            'cost': row[3],
+            'supplier': row[4]
+        })
+    conn.close()
+    return expenses
+
+def save_product(product):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT OR REPLACE INTO products (id, name, category, price, quantity, measurement_category, expiry_date) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                   (product['ID'], product['Name'], product['Category'], product['Price'], product['Quantity'], product['Measurement Category'], product['Expiry Date']))
+    conn.commit()
+    conn.close()
+
+def update_quantity(product_id, qty_change):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('UPDATE products SET quantity = quantity + ? WHERE id = ?', (qty_change, product_id))
+    conn.commit()
+    conn.close()
+
+def add_sale(sale):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO sales (date, product, quantity, revenue, bill_id) VALUES (?, ?, ?, ?, ?)',
+                   (sale['date'], sale['product'], sale['quantity'], sale['revenue'], sale.get('bill_id', '')))
+    conn.commit()
+    conn.close()
+
+def add_expense(expense):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO expenses (date, product, quantity, cost, supplier) VALUES (?, ?, ?, ?, ?)',
+                   (expense['date'], expense['product'], expense['quantity'], expense['cost'], expense.get('supplier', '')))
+    conn.commit()
+    conn.close()
+
+def delete_product_db(product_id):
+    conn = sqlite3.connect('inventory.db')
+    cursor = conn.cursor()
+    cursor.execute('DELETE FROM products WHERE id = ?', (product_id,))
+    conn.commit()
+    conn.close()
+
+active_products, expired_products = get_active_products()
+sales = get_sales()
+expenses = get_expenses()
 
 #function to add products to inventory
 def add_product(num_product):
@@ -364,30 +451,6 @@ def export_to_csv():
         writer.writerow({k: p_copy.get(k, "") for k in writer.fieldnames})
     return csv_data.getvalue()
 
-# Load sales if exists
-if os.path.exists("sales.json"):
-    with open("sales.json", "r") as file:
-        sales = json.load(file)
-else:
-    sales = []
-
-# Function to save sales
-def save_sales():
-    with open("sales.json", "w") as file:
-        json.dump(sales, file, indent=4)
-
-# Load expenses if exists
-if os.path.exists("expenses.json"):
-    with open("expenses.json", "r") as file:
-        expenses = json.load(file)
-else:
-    expenses = []
-
-# Function to save expenses
-def save_expenses():
-    with open("expenses.json", "w") as file:
-        json.dump(expenses, file, indent=4)
-
 # Streamlit App
 st.title("Warehouse Inventory Management")
 
@@ -461,7 +524,7 @@ elif menu == "Add Products":
                         "Expiry Date": expiry_input
                     }
                     active_products.append(data)
-                    save_data()
+                    save_product(data)
                     st.success(f"Product {name.title()} added successfully!")
                     st.rerun()
             except ValueError:
@@ -492,11 +555,12 @@ elif menu == "Sell Product":
                         "date": datetime.now().strftime("%d-%m-%Y"),
                         "product": product["Name"],
                         "quantity": qty,
-                        "revenue": total
+                        "revenue": total,
+                        "bill_id": f"BILL-{random.randint(1000, 9999)}"
                     }
                     sales.append(sale)
-                    save_data()
-                    save_sales()
+                    update_quantity(product['ID'], -qty)
+                    add_sale(sale)
                     st.success("Sale completed!")
                     st.rerun()
     else:
@@ -516,11 +580,12 @@ elif menu == "Purchase Stock":
                 "date": datetime.now().strftime("%d-%m-%Y"),
                 "product": product["Name"],
                 "quantity": qty,
-                "cost": cost
+                "cost": cost,
+                "supplier": f"Supplier-{random.randint(1, 10)}"
             }
             expenses.append(expense)
-            save_data()
-            save_expenses()
+            update_quantity(product['ID'], qty)
+            add_expense(expense)
             st.success("Purchase recorded!")
             st.rerun()
     else:
@@ -559,13 +624,13 @@ elif menu == "Update Stock":
                             "revenue": qty * product["Price"]
                         }
                         sales.append(sale)
-                        save_data()
-                        save_sales()
+                        update_quantity(product['ID'], -qty)
+                        add_sale(sale)
                         st.success("Stock updated!")
                         st.rerun()
                 else:
                     product["Quantity"] += qty
-                    save_data()
+                    update_quantity(product['ID'], qty)
                     st.success("Stock updated!")
                     st.rerun()
         else:
@@ -591,7 +656,7 @@ elif menu == "Update Price":
             new_price = st.number_input("New Price (INR)", min_value=0.01, step=0.01)
             if st.button("Update Price"):
                 product["Price"] = new_price
-                save_data()
+                save_product(product)
                 st.success("Price updated!")
                 st.rerun()
         else:
@@ -616,7 +681,7 @@ elif menu == "Remove Product":
         if product:
             if st.button("Remove Product"):
                 active_products.remove(product)
-                save_data()
+                delete_product_db(product['ID'])
                 st.success("Product removed!")
                 st.rerun()
         else:
