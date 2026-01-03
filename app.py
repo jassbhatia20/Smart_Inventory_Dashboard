@@ -26,8 +26,27 @@
 # - `menu()`
 
 # At the end of the file `menu()` is called to start the program.
+import os
+import json
+def load_data():
+    file_name = "inventory_db.json"
+    # Check if file exists to avoid crashing on first run
+    if not os.path.exists(file_name):
+        return [] 
+    
+    try:
+        with open(file_name, "r") as file:
+            return json.load(file) # Converts JSON string back to Python List
+    except (json.JSONDecodeError, IOError):
+        return [] # Returns empty list if file is corrupted or empty
 
-products=[] #to store multiple dictionaries
+def save_data():
+    with open("inventory_db.json", "w") as file:
+        # indent=4 makes it look pretty and readable like a real database
+        json.dump(products, file, indent=4)
+
+
+products=load_data() #to store multiple dictionaries
 
 #function to add products to inventory
 def add_product(num_product):
@@ -84,6 +103,7 @@ def add_product(num_product):
         
         #adding dictionary to the product list
         products.append(data)
+        save_data()  # Save data after each addition
 
         print(f"Product {name.title()} added to inventory.\n")
 
@@ -94,6 +114,7 @@ def add_if_not_found():
     add_prod=input("Do you want to add this product to inventory? (yes/no): ")
     if add_prod.lower()=="yes" or add_prod.lower()=="y":
         add_product(1)
+        save_data()
     else:
         print("Returning to main menu.\n")
 
@@ -124,6 +145,7 @@ def update_stock(search_id):
             else:
                 print("Invalid choice.\nMake sure to choose between 1 or 2, or sold or added.")
                 update_stock(search_id)
+                save_data()
 
     print(f"Total stock quantity of {i['Name']} is {i['Quantity']} in the inventory.")
 
